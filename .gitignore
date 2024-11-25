@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.bak
+
+# Streamlit
+.streamlit/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Environment files
+.env
+.venv/
+venv/
+ENV/
+env/
+
+# Secrets
+*.env
+
+# IDE Files
+.idea/
+
+# Python distribution files
+*.egg
+*.egg-info
+dist/
+build/
+*.manifest
+*.spec
+
+
+# Custom ----------------------------------------------------------------
+
+APICallTesting.py
+TODO.txt
+/reports
