@@ -26,7 +26,6 @@ Adhere to the following rules:
 - Use Plotly for charts and graphs.
 - Return the code snippet as Python code. 
 - Make the graphs vivid.
-- Add option to select fields/columns if it can improve user experience.
 - If the prompt is not specific or relevant, provide your answer inside: `st.markdown()`.
 """},
             {"role": "user", "content": f"The DataFrame's first 5 rows:\n {', '.join(df.head())}."},
