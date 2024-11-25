@@ -2,7 +2,7 @@
 
 ## Overview
 
-InsightFlow is a Streamlit app that allows users to input CSV or Excel files and interact with an AI chatbot to get information about their data. Users can plot the data, obtain results, and download the processed data. Powered by Google's Gemini✨
+InsightFlow is a Streamlit app that allows users to input CSV or Excel files and interact with an AI chatbot to get information about their data. Users can plot the data, obtain results, and download the processed data. Powered by OpenAI's ChatGPT✨
 
 ## Features
 
