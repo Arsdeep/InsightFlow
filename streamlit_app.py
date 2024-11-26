@@ -24,6 +24,9 @@ if "chat_history" not in st.session_state:
 
 if "df" not in st.session_state:
     st.session_state.df = None
+    
+if "openai_messages" not in st.session_state:
+    st.session_state.openai_messages = None
 
 # Sidebar for file management and additional controls
 with st.sidebar:
@@ -35,6 +38,7 @@ with st.sidebar:
     # Add a clear history button in the sidebar
     if st.button("Clear Chat History"):
         st.session_state.chat_history = []
+        st.session_state.openai_messages = None
         st.rerun()
     
     # Debug mode toggle
@@ -64,7 +68,7 @@ for message in st.session_state.chat_history:
 
 # Input prompt for user
 if st.session_state.df is None:
-    user_prompt = st.chat_input("Upload a CSV/Excel file above...", disabled=True)
+    user_prompt = st.chat_input("Upload a CSV/Excel file to continue...", disabled=True)
 else:
     user_prompt = st.chat_input("Enter your prompt")
 
@@ -73,7 +77,7 @@ if user_prompt:
     st.chat_message("user").markdown(user_prompt)
 
     try:
-        python_code = openai_fn.get_openai_response(user_prompt, st.session_state.df)
+        python_code = openai_fn.get_openai_response(user_prompt)
 
         # Display LLM response
         if debug_mode and python_code:
