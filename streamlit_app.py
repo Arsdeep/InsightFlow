@@ -30,7 +30,7 @@ if "openai_messages" not in st.session_state:
 
 # Sidebar for file management and additional controls
 with st.sidebar:
-    st.header("📁 File Management")
+    st.header("📁 File Upload")
     
     # File upload widget in sidebar
     uploaded_file = st.file_uploader("Choose a file", type=["csv", "xlsx", "xls"])
